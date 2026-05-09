@@ -1,5 +1,6 @@
 ﻿#SingleInstance Force
 DetectHiddenWindows true
+SetTitleMatchMode "RegEx"
 
 
 W := 100
@@ -7,7 +8,7 @@ H := 100
 X := 100
 Y := 100
 
-SVPROC := "ahk_exe StardewModdingAPI.exe"
+SVPROC := "ahk_exe Stardew"
 
 
 suspendnoti(susstate) {
@@ -78,26 +79,6 @@ Hotkey "LButton", sdfunc
 sdfunc(ThisHotkey) {
 	Critical
 	if (funcstate == 0) {
-		/*
-		LBdown()
-		SetTimer LBdown, 190
-		sleep 10
-		LBup()
-		SetTimer LBup, 190
-		sleep 140
-		Anidown()
-		SetTimer Anidown, 190
-		sleep 30
-		Aniup()
-		SetTimer Aniup, 190
-		KeyWait "vk1"
-		SetTimer LBdown, 0
-		SetTimer LBup, 0
-		SetTimer Anidown, 0
-		SetTimer Aniup, 0
-		*/		
-		
-		
 		while GetKeyState("vk1", "P") {
 			SendInput "{LButton Down}"
 			sleep 10
@@ -110,30 +91,6 @@ sdfunc(ThisHotkey) {
 		}
 		Exit
 	} else if (funcstate == 1) {
-		/*
-		while GetKeyState("vk1", "P") {
-			SendInput "{LButton Down}"
-			sleep 10
-			SendInput "{LButton Up}"
-			sleep 150
-			SendInput "{r Down}{Delete Down}{RShift Down}"
-			sleep 30
-			SendInput "{r Up}{Delete Up}{RShift Up}"
-			sleep 10
-			SendInput "{WheelUp}"
-			sleep 80
-			SendInput "{LButton Down}"
-			sleep 10
-			SendInput "{LButton Up}"
-			sleep 150
-			SendInput "{r Down}{Delete Down}{RShift Down}"
-			sleep 30
-			SendInput "{r Up}{Delete Up}{RShift Up}"
-			sleep 10
-			SendInput "{WheelDown}"
-			sleep 80
-		}
-		*/
 		while GetKeyState("vk1", "P") {
 			SendInput "{LButton Down}"
 			sleep 70
