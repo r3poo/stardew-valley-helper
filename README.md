@@ -1,5 +1,6 @@
 # stardew-valley-helper
-Animation cancelling via AutoHotKey
+Animation cancelling via AutoHotKey\
+Works with both orignal game and SMAPI
 
 ## How It Works
 The script checks Stardew Valley is in focus and you are outside of menus, then registers a hotkey to trigger the animation cancel to substantially quicken tool use.\
